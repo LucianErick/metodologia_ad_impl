@@ -1,34 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[48]:
-
-
 import pandas as pd
-
-
-# In[47]:
-
-
 import numpy as np
-
-
-# In[46]:
-
-
 import seaborn as sb
 import matplotlib.pyplot as plt
 
-
-# In[5]:
-
-
 data = pd.read_excel('./sheetset.xls')
-data.head(5)
 
-
-# In[92]:
-
+# Visualização da primeira comparação de imagens
 
 imagem_1_1 = data.groupby(["imagem_1_1"])["imagem_1_1"].count()
 imagem_1_2 = data.groupby(["imagem_1_2"])["imagem_1_2"].count()
@@ -51,10 +31,7 @@ plt.title("Resultados da imagem 1", fontsize=15)
 plt.legend(loc='upper center')
 plt.show()
 
-
-
-# In[93]:
-
+# Visualização da segunda comparação de imagens
 
 imagem_2_1 = data.groupby(["imagem_2_1"])["imagem_2_1"].count()
 imagem_2_2 = data.groupby(["imagem_2_2"])["imagem_2_2"].count()
@@ -77,9 +54,7 @@ plt.title("Resultados da imagem 2", fontsize=15)
 plt.legend(loc='upper center')
 plt.show()
 
-
-# In[89]:
-
+# Visualização da terceira comparação de imagens
 
 imagem_3_1 = data.groupby(["imagem_3_1"])["imagem_3_1"].count()
 imagem_3_2 = data.groupby(["imagem_3_2"])["imagem_3_2"].count()
@@ -102,9 +77,7 @@ plt.title("Resultados da imagem 3", fontsize=15)
 plt.legend(loc='upper center')
 plt.show()
 
-
-# In[94]:
-
+# Visualização da Quarta comparação de imagens
 
 imagem_4_1 = data.groupby(["imagem_4_1"])["imagem_4_1"].count()
 imagem_4_2 = data.groupby(["imagem_4_2"])["imagem_4_2"].count()
@@ -127,9 +100,7 @@ plt.title("Resultados da imagem 4", fontsize=15)
 plt.legend(loc='upper center')
 plt.show()
 
-
-# In[95]:
-
+# Visualização da Quinta comparação de imagens
 
 imagem_5_1 = data.groupby(["imagem_5_1"])["imagem_5_1"].count()
 imagem_5_2 = data.groupby(["imagem_5_2"])["imagem_5_2"].count()
@@ -151,10 +122,3 @@ plt.title("Resultados da imagem 5", fontsize=15)
 
 plt.legend(loc='upper center')
 plt.show()
-
-
-# In[ ]:
-
-
-
-
