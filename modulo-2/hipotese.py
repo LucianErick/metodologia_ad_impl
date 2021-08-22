@@ -1,34 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[48]:
-
-
 import pandas as pd
-
-
-# In[47]:
-
-
 import numpy as np
-
-
-# In[46]:
-
-
 import seaborn as sb
 import matplotlib.pyplot as plt
 
-
-# In[5]:
-
-
 data = pd.read_excel('./sheetset.xls')
-data.head(5)
-
-
-# In[151]:
-
 
 imagem_1_2 = data.groupby(["imagem_1_2"])["imagem_1_2"].count()
 imagem_2_2 = data.groupby(["imagem_2_2"])["imagem_2_2"].count()
@@ -44,43 +22,12 @@ def calc_percentual(dataset):
 porcentagens = [calc_percentual(imagem_1_2), calc_percentual(imagem_2_2), calc_percentual(imagem_3_2), calc_percentual(imagem_4_2), calc_percentual(imagem_5_2)]
 
 
-plt.bar(labels, porcentagens, color="#0032e8", alpha=0.75)
+plt.barh(labels, porcentagens, color="#0032e8", alpha=0.75)
 
 plt.xlabel("Questões", fontsize=12)
-plt.yticks([50, 75, 85, 90, 95])
+plt.xticks([50, 75, 85, 90, 95])
 plt.ylabel("Porcentagem", fontsize=12)
 plt.title("Nível de 'conversão' de designs com UX elaborados", fontsize=15)
 plt.gcf().set_size_inches(5, 5)
 
 plt.show()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
